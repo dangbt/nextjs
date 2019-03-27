@@ -2,7 +2,7 @@
 // Event handlers like onClick can't be added to this file
 
 // ./pages/_document.js
-import Document, { Html, Main, NextScript } from 'next/document'
+import Document, { Html, Head, Main, NextScript } from 'next/document'
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -13,6 +13,10 @@ class MyDocument extends Document {
   render() {
     return (
       <Html>
+        <Head>
+          <title>app</title>
+          <meta name="description" content="description  app app" />
+        </Head>
         <body className="custom_class">
           <Main />
           <NextScript />
